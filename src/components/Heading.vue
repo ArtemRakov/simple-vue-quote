@@ -27,7 +27,9 @@
     background-color: #F6F6F6;
   }
   .progress {
+    width: 10%;
     background-color: #4D8ABB;
+    transition: 0.3s;
   }
   p {
     text-align: center;

@@ -15,8 +15,7 @@
       props: ['quotes'],
       methods: {
         deleteQuote(quote) {
-          const index = this.quotes.indexOf(quote)
-          this.quotes.splice(index, 1)
+          this.$emit("deleteQuote", quote)
         }
       }
     }

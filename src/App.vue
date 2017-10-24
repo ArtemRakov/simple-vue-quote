@@ -2,7 +2,7 @@
     <div class="container">
       <app-heading :quotes="quotes"> </app-heading>
       <app-create-quote :quotes="quotes"> </app-create-quote>
-      <app-show-quote :quotes="quotes"> </app-show-quote>
+      <app-show-quote :quotes="quotes" @deleteQuote="deleteQuote"> </app-show-quote>
     </div>
 </template>
 
@@ -14,6 +14,12 @@
       data: function() {
         return {
           quotes: []
+        }
+      },
+      methods: {
+        deleteQuote(quote) {
+          const index = this.quotes.indexOf(quote)
+          this.quotes.splice(index, 1)
         }
       },
         components: {
